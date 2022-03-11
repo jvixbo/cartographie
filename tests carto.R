@@ -23,14 +23,16 @@ mapview(sp_total, zcol = "tot_sp", at = c(0,6,13,24,39))  +
 
 #J'essaye d'ajouter les stations de peche "Wama"
 mapview(sp_total, zcol = "tot_sp", at = c(0,6,13,24,39))  +
-  mapview(wama, col.regions = "white", legend=FALSE)
+  mapview(wama, col.regions = "white")
 #Ce qui serait intéressant, ce serait de faire des points plus ou moins gros en fonction de la population totale dans les stations
 
 #On va essayer de combiner toutes les données de pêche
 mapview(sp_total, zcol = "tot_sp", at = c(0,6,13,24,39))  +
-  mapview(ASPE, col.regions = "white", legend=FALSE) +
-  mapview(AELB, col.regions = "black", legend=FALSE) +
-  mapview(fede, col.regions = "red", legend=FALSE) +
-  mapview(geo15, col.regions = "light blue", legend=FALSE) +
-  mapview(geo18, col.regions = "blue", legend=FALSE) +
+  mapview(wama, col.regions = "white") +
+  mapview(ASPE, col.regions = "green") +
+  mapview(AELB, col.regions = "black") +
+  mapview(fede, col.regions = "red") +
+  mapview(geo15, col.regions = "light blue") +
+  mapview(geo18, col.regions = "blue")
+#Le code est trop lourd (trop de points à traiter) alors ne pas le faire !
   
