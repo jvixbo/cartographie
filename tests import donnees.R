@@ -1,10 +1,13 @@
+#Ne pas oublier de changer le working directory, ça bug à chaque fois et ça me l'enlève
+
 library(sf)
 library(tidyverse)
 library(dplyr)
 library(mapview)
 library(ggplot2)
 library(cartography)
-setwd("~/Projet R")
+library(leaflet)
+library(leafpop)
 
 
 

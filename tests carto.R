@@ -49,3 +49,5 @@ mapview(sp_total, zcol = "ANG", alpha.regions=0.3)+
   mapview(wama, zcol="ANG", alpha=0, layer.name=c("Presence-absence des anguilles"), cex=3,  popup = popupTable(sp_total, zcol = c("ANG")))
 #Essayer de comprendre comment on modifie les couleurs et comment on modifie le petit pop-up quand on clique
 #On ne peut pas mettre deux espèces sur la même carte sans trouver comment sélectionner plutôt l'une ou l'autre car ça se chevauche et du coup on ne voit que du violet
+
+#S'intéresser au "multilayer"
