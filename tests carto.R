@@ -22,9 +22,14 @@ mapview(sp_total, zcol = "tot_sp", at = c(0,6,13,24,39))  +
 #Pas top, on voit que les bassins versants font parfois partie de plusieurs départements ou sortent carrément de Bretagne
 
 #J'essaye d'ajouter les stations de peche "Wama"
-mapview(sp_total, zcol = "tot_sp", at = c(0,6,13,24,39))  +
-  mapview(wama, col.regions = "white")
+mapview(sp_total, zcol = "tot_sp", at = c(0,6,13,24,39))+
+  mapview(exu, col.regions = c("#6699FF"), cex=1, alpha=0, layer.name=c("Exutoires de Bretagne"))  +
+  mapview(wama, col.regions = c("#003366"), cex=2, alpha=0, layer.name=c("Stations de peches wama"))
 #Ce qui serait intéressant, ce serait de faire des points plus ou moins gros en fonction de la population totale dans les stations
+#J'ai ajouté les exutoirs juste pour le 
+#"cex=" change la taille des points
+#"alpha" détermine l'opacité du contour des points
+#"Layer name" permet de renommer les couches
 
 #On va essayer de combiner toutes les données de pêche
 mapview(sp_total, zcol = "tot_sp", at = c(0,6,13,24,39))  +
