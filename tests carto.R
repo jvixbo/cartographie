@@ -15,11 +15,13 @@ mapview(sp_total, zcol = "tot_sp", at = c(0,6,13,24,39))
 mapview(sp_total, zcol = "tot_sp", at = c(0,6,13,24,39))  +
   mapview(exu, col.regions = "yellow")
 
-#On va essayer de faire un "focus" sur les régions
+#On va essayer de faire un "focus" sur les départements
 mapview(sp_total, zcol = "tot_sp", at = c(0,6,13,24,39))  +
-  mapview(peche_dir, burst=TRUE, zcol ="Nom_Depa", alpha.regions = 0.5, legend=FALSE, col.regions=c("blue", "red", "pink", "black"))
+  mapview(peche_dir, burst=TRUE, zcol ="Nom_Depa", alpha.regions = 0, legend=FALSE, alpha=0)
 #J'ai mis legend=FALSE sinon on a des couleurs pour chaque région
 #Pas top, on voit que les bassins versants font parfois partie de plusieurs départements ou sortent carrément de Bretagne
+#J'ai ajouté les départements mais je les ai mises en transparent, comme ça on peut juste zoomer sur les départements mais on ne les visualise pas vraiment
+
 
 #J'essaye d'ajouter les stations de peche "Wama"
 mapview(sp_total, zcol = "tot_sp", at = c(0,6,13,24,39))+
@@ -40,4 +42,10 @@ mapview(sp_total, zcol = "tot_sp", at = c(0,6,13,24,39))  +
   mapview(geo15, col.regions = "light blue") +
   mapview(geo18, col.regions = "blue")
 #Le code est trop lourd (trop de points à traiter) alors ne pas le faire !
-  
+
+#Exemple: Carte de présente/absence des anguilles en Bretagne
+mapview(sp_total, zcol = "ANG", alpha.regions=0.3)+
+  mapview(peche_dir, burst=TRUE, zcol ="Nom_Depa", alpha.regions = 0, legend=FALSE, alpha=0)+
+  mapview(wama, zcol="ANG", alpha=0, layer.name=c("Presence-absence des anguilles"), cex=3,  popup = popupTable(sp_total, zcol = c("ANG")))
+#Essayer de comprendre comment on modifie les couleurs et comment on modifie le petit pop-up quand on clique
+#On ne peut pas mettre deux espèces sur la même carte sans trouver comment sélectionner plutôt l'une ou l'autre car ça se chevauche et du coup on ne voit que du violet
