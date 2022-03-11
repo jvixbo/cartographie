@@ -4,6 +4,7 @@ library(dplyr)
 library(mapview)
 library(ggplot2)
 library(cartography)
+setwd("~/Projet R")
 
 
 
@@ -37,3 +38,4 @@ geo15<-st_read("Raw Data/ATLAS_POISSONS/donnees_geographiques_reference/peche_ge
 geo18<-st_read("Raw Data/ATLAS_POISSONS/donnees_geographiques_reference/peche_georect_sd_2015_2019_20210818.shp")
 
 ASPE<-st_read("Raw Data/ATLAS_POISSONS/donnees_geographiques_reference/peche_ASPE_20200215.shp")
+
