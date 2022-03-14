@@ -8,8 +8,10 @@ library(ggplot2)
 library(cartography)
 library(leaflet)
 library(leafpop)
+library(devtools)
 
-
+devtools::install_github("PascalIrz/aspe")
+devtools::install_github("PascalIrz/atlaspoissons")
 
 #Mettre le chemin complet à partir du working directory (sans le mettre dans la liste) sinon ça indique que le fichier n'existe pas
 sp_total<-st_read("Raw Data/ATLAS_POISSONS/ATLAS_SIG/atlas_piscicole_bretagne_20200220/layers/bv_20200220_Especes_totales.shp")
