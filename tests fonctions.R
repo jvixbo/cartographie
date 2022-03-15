@@ -43,3 +43,12 @@ veigar_op <- function(kills, minions, items) {
 
 #on met: le nombre de kills, le nombre de minions tués, l'ap qu'il a avec ses items et runes
 veigar_op(21,200,499)
+
+
+#Test randomize items
+
+item_drop <- function(item) {
+  
+  if(item=1 )
+
+}

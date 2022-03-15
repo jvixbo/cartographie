@@ -72,7 +72,8 @@ lire_xlsx_fede35 <- function(repertoire, fichier_reference = "CR op pêche elec 
 
 }
 
-data <- lire_xlsx_fede35(repertoire="raw_data",fichier_reference = "CR op pêche elec FD35 2020-VF.xlsx")
+fede35 <- lire_xlsx_fede35(repertoire = "../raw_data/", 
+                           fichier_reference = "CR op pêche elec FD35 2020-VF.xlsx")
 
 xlsx_files <- list.files(path = repertoire,
                          pattern = "CR op pêche elec FD35",
