@@ -11,13 +11,6 @@ ui <- dashboardPage(
                                ),
                                taskItem(value = 5, color = "olive",
                                         "Master essay"
-                               ),
-                               
-                               taskItem(value = 100, color = "aqua",
-                                        "Task 3"
-                               ),
-                               taskItem(value = 100, color = "light-blue",
-                                        "Task 4"
                                )
                   )
                   ),
