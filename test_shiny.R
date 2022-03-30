@@ -30,7 +30,8 @@ ui <- dashboardPage(
       # First tab content
       tabItem(tabName = "home",
               h2("Salutations !"),
-              "Welcome to jvixbo's dashboard !"),
+              "Welcome to jvixbo's dashboard !",\\
+              "Biology student, fish and phasm lover"),
       
       tabItem(tabName = "lol",
               h2("Goals - League of Legends"),
@@ -40,7 +41,7 @@ ui <- dashboardPage(
                 ),
               
               fluidRow(
-                infoBox("LOL - Flex", "Argent I - 75 LP", icon = icon("star-empty", lib="glyphicon"), color = "aqua"),
+                infoBox("LOL - Flex", "Silver I - 75 LP", icon = icon("star-empty", lib="glyphicon"), color = "aqua"),
                 infoBoxOutput("progressBox2"),
                 infoBoxOutput("winrate2")
                 ),
