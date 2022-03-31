@@ -3,16 +3,14 @@ library(shinydashboard)
 
 ui <- dashboardPage(
   
-  # Titre (haud à gauche)
+  # Couleur du thème
+  skin = "yellow",
+  
+  # Titre (haut à gauche)
   dashboardHeader(title = "jvixbo's dashboard",
-                  dropdownMenu(type = "tasks", badgeStatus = "success",
-                               taskItem(value = 85.7, color = "yellow",
-                                        "Answer RP"
-                               ),
-                               taskItem(value = 5, color = "olive",
-                                        "Master essay"
-                               )
-                  )
+                  
+                  tasks
+                  
                   ),
   
   # Sidebar à gauche (menu déroulant)
@@ -20,7 +18,8 @@ ui <- dashboardPage(
     sidebarMenu(
       menuItem("Home", tabName = "home", icon = icon("menu-right", lib="glyphicon")),
       menuItem("Goals League of Legends", tabName = "lol", icon = icon("menu-right", lib="glyphicon")),
-      menuItem("Role Play", tabName = "rp", icon = icon("menu-right", lib="glyphicon"))
+      menuItem("Role Play", tabName = "rp", icon = icon("menu-right", lib="glyphicon")),
+      menuItem("Drawing", tabName = "drawing", icon = icon("menu-right", lib="glyphicon"), badgeLabel = "new", badgeColor = "green")
     )
   ),
   
@@ -32,7 +31,9 @@ ui <- dashboardPage(
       
       lol_goals,
       
-      rpg
+      rpg,
+      
+      art
     ),
   ),
 )
@@ -44,10 +45,60 @@ server <- function(input, output) {
   #                     PARTIE LOL                          
   # ========================================================
   
-
+  # Ligne 1
+  # Bloc 1
+  output$progressBox <- renderInfoBox({
+    infoBox(
+      "Road to Gold", paste0(round((839/1100)*100),"%"), icon = icon("list"),
+      color = "yellow"
+    )
+  })
+  
+  #Bloc 2
+  output$winrate <- renderInfoBox({
+    infoBox(
+      "Winrate", paste0(round((38/79)*100),"%"), icon = icon("remove", lib="glyphicon"),
+      color = "orange", fill = TRUE, 
+    )
+  })
+  
+  # Ligne 2
+  # Bloc 1
+  output$progressBox2 <- renderInfoBox({
+    infoBox(
+      "Road to Platinium", paste0(round((1075/1500)*100),"%"), icon = icon("list"),
+      color = "teal", 
+    )
+  })
+  
+  # Bloc 2
+  output$winrate2 <- renderInfoBox({
+    infoBox(
+      "Winrate", paste0(round((29/55)*100),"%"), icon = icon("ok", lib="glyphicon"),
+      color = "olive", fill = TRUE, 
+    )
+  })
+  
+  
+  # Ligne 3
+  # Bloc 1
+  output$progressBox3 <- renderInfoBox({
+    infoBox(
+      "Road to Diamond", paste0(round((20/26)*100),"%"), icon = icon("list"),
+      color = "purple",
+    )
+  }) 
+  
+  # Bloc 2
+  output$winrate3 <- renderInfoBox({
+    infoBox(
+      "Winrate", paste0(round((10/21)*100),"%"), icon = icon("remove", lib="glyphicon"),
+      color = "orange", fill = TRUE, 
+    )
+  })
   
   # ========================================================
-  #                     PARTIE RPG                          
+  #                     PARTIE LOL                          
   # ========================================================
   
   # Ligne 1
