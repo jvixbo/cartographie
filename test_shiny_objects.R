@@ -3,8 +3,8 @@
 home <- tabItem(tabName = "home",
                 h2("Salutations !"),
                 p("Welcome to jvixbo's dashboard !",
-                  
-                "Biology student, fish and phasm lover"))
+                  br(), # Sert à revenir à la ligne 
+                  "Biology student, fish and phasm lover"))
 
 #######################LOL GOALS#####################
 

@@ -7,7 +7,7 @@ ui <- dashboardPage(
   skin = "yellow",
   
   # Titre (haut à gauche)
-  dashboardHeader(title = "jvixbo's dashboard",
+  dashboardHeader(title = "JVIXBO",
                   
                   tasks
                   
