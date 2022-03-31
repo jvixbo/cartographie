@@ -69,4 +69,6 @@ tasks <- dropdownMenu(type = "tasks", badgeStatus = "success",
 #######################ART###########################
 
 art <- tabItem(tabName = "drawing",
-               h2("« My genius will be understood. Eventually. » - Khada Jhin, the Virtuoso"))
+               h2("« My genius will be understood. Eventually. »", 
+                  br(), 
+                  "- Khada Jhin, the Virtuoso"))
