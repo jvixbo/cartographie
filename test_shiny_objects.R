@@ -11,7 +11,7 @@ home <- tabItem(tabName = "home",
 lol_goals <- tabItem(tabName = "lol",
                      h2("Goals - League of Legends"),
                      fluidRow(
-                       infoBox("LOL - Solo/Duo", "Silver III - 39 LP", icon = icon("star", lib="glyphicon"), color = "aqua"), infoBoxOutput("progressBox"),
+                       infoBox("LOL - Solo/Duo", "Silver III - 48 LP", icon = icon("star", lib="glyphicon"), color = "aqua"), infoBoxOutput("progressBox"),
                        infoBoxOutput("winrate")
                      ),
                      
