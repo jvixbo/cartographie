@@ -1,5 +1,5 @@
 #######################HOME##########################
-
+rm(list = ls())
 home <- tabItem(tabName = "home",
                 h2("Salutations !"),
                 p("Welcome to jvixbo's dashboard !",
@@ -71,4 +71,9 @@ tasks <- dropdownMenu(type = "tasks", badgeStatus = "success",
 art <- tabItem(tabName = "drawing",
                h2("« My genius will be understood. Eventually. »", 
                   br(), 
-                  "- Khada Jhin, the Virtuoso"))
+                  "- Khada Jhin, the Virtuoso"),
+               fluidRow(box("Have to finish the Tarotober.", 
+                            br(),
+                            "Have to finish drawing of Alma.")
+                        )
+               )
