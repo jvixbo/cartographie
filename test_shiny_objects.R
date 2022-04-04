@@ -1,3 +1,6 @@
+library(shiny)
+library(shinydashboard)
+
 #######################HOME##########################
 rm(list = ls())
 home <- tabItem(tabName = "home",
@@ -11,17 +14,17 @@ home <- tabItem(tabName = "home",
 lol_goals <- tabItem(tabName = "lol",
                      h2("Goals - League of Legends"),
                      fluidRow(
-                       infoBox("LOL - Solo/Duo", "Silver III - 64 LP", icon = icon("star", lib="glyphicon"), color = "aqua"), infoBoxOutput("progressBox"),
+                       infoBox("LOL - Solo/Duo", "Silver II - 41 LP", "jvixbo #EUW", icon = icon("star", lib="glyphicon"), color = "aqua"), infoBoxOutput("progressBox"),
                        infoBoxOutput("winrate")
                      ),
                      
                      fluidRow(
-                       infoBox("LOL - Flex", "Silver I - 75 LP", icon = icon("star-empty", lib="glyphicon"), color = "aqua"),
+                       infoBox("LOL - Flex", "Silver I - 75 LP", "jvixbo #EUW", icon = icon("star-empty", lib="glyphicon"), color = "aqua"),
                        infoBoxOutput("progressBox2"),
                        infoBoxOutput("winrate2")
                      ),
                      fluidRow(
-                       infoBox("Wild Rift", "Platinium 1", icon = icon("phone", lib="glyphicon"), color = "teal"),
+                       infoBox("Wild Rift", "Diamond IV", "noticemeSHENpai #2403", icon = icon("phone", lib="glyphicon"), color = "olive"),
                        infoBoxOutput("progressBox3"),
                        infoBoxOutput("winrate3")
                      )
@@ -34,13 +37,13 @@ rpg <- tabItem(tabName = "rp",
                
                # Petites cases mimis
                fluidRow(
-                 infoBox("Shen & Eiva", "Done - 20/06/2022", icon = icon("ok", lib="glyphicon") , color = "yellow"),
+                 infoBox("Shen & Eiva", "Done - 03/04/2022", icon = icon("ok", lib="glyphicon") , color = "yellow"),
                  infoBoxOutput("autrerp"),
                  infoBoxOutput("autrerp2")
                ),
                
                fluidRow(
-                 infoBox("Sett & Alma", "Done - 20/03/2022", icon = icon("ok", lib="glyphicon") , color = "olive"),
+                 infoBox("Sett & Alma", "Done - 03/04/2022", icon = icon("ok", lib="glyphicon") , color = "olive"),
                  infoBoxOutput("autrerp3"),
                  infoBoxOutput("autrerp4")
                ),
@@ -72,8 +75,31 @@ art <- tabItem(tabName = "drawing",
                h2("« My genius will be understood. Eventually. »", 
                   br(), 
                   "- Khada Jhin, the Virtuoso"),
-               fluidRow(box("Have to finish the Tarotober.", 
+               fluidRow(box( title = "More 'serious' projects", height = 150, width = 4, solidHeader = TRUE, status = "primary",
+                            
+                            # Contenu
+                            "Tarotober x League of Legends (5/31)", 
                             br(),
-                            "Have to finish drawing of Alma.")
+                            "Mommy's little monster"),
+                        
+                        box(title = "Mini-comics", height = 150, width = 4, solidHeader = TRUE, status = "warning",
+                                
+                            # Contenu
+                            "A day at the zoo",
+                            br(),
+                            "Coming Out Part 1",
+                            br(),
+                            "Coming Out Part 2", 
+                            br(),
+                            "Welcome to the Spirit Realm" ),
+                        
+                        box(title = "Skinline", height = 150, width = 4, solidHeader = TRUE, status = "success",
+                            
+                            # Contenu
+                            "Battle Academia",
+                            br(),
+                            "Galactikkraken",
+                            br(),
+                            "Crime City Nightmare / Debonair")
                         )
                )

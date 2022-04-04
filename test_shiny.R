@@ -1,6 +1,3 @@
-library(shiny)
-library(shinydashboard)
-
 ui <- dashboardPage(
   
   # Couleur du thème
@@ -23,16 +20,19 @@ ui <- dashboardPage(
     )
   ),
   
-  # Partie principale du dashboard, là où on va mettre les cartes
+  # Partie principale du dashboard
   dashboardBody(
     tabItems(
       # First tab content
       home,
       
+      # Second tab content
       lol_goals,
       
+      # Third tab content
       rpg,
       
+      # Fourth tab content
       art
     ),
   ),
@@ -49,7 +49,7 @@ server <- function(input, output) {
   # Bloc 1
   output$progressBox <- renderInfoBox({
     infoBox(
-      "Road to Gold", paste0(round((868/1100)*100),"%"), icon = icon("list"),
+      "Road to Gold", paste0(round((941/1100)*100),"%"), icon = icon("list"),
       color = "yellow"
     )
   })
@@ -57,8 +57,8 @@ server <- function(input, output) {
   #Bloc 2
   output$winrate <- renderInfoBox({
     infoBox(
-      "Winrate", paste0(round((44/90)*100),"%"), icon = icon("remove", lib="glyphicon"),
-      color = "orange", fill = TRUE, 
+      "Winrate", paste0(round((49/95)*100),"%"), icon = icon("ok", lib="glyphicon"),
+      color = "olive", fill = TRUE, 
     )
   })
   
@@ -84,7 +84,7 @@ server <- function(input, output) {
   # Bloc 1
   output$progressBox3 <- renderInfoBox({
     infoBox(
-      "Road to Diamond", paste0(round((20/26)*100),"%"), icon = icon("list"),
+      "Road to Diamond", paste0(round((21/26)*100),"%"), icon = icon("list"),
       color = "purple",
     )
   }) 
@@ -92,8 +92,8 @@ server <- function(input, output) {
   # Bloc 2
   output$winrate3 <- renderInfoBox({
     infoBox(
-      "Winrate", paste0(round((10/21)*100),"%"), icon = icon("remove", lib="glyphicon"),
-      color = "orange", fill = TRUE, 
+      "Winrate", paste0(round((17/29)*100),"%"), icon = icon("ok", lib="glyphicon"),
+      color = "olive", fill = TRUE, 
     )
   })
   
@@ -105,7 +105,7 @@ server <- function(input, output) {
   # Bloc 1
   output$autrerp <- renderInfoBox({
     infoBox(
-      "Zed & Cobalt", paste0("Done - 20/03/2022"), icon = icon("ok", lib="glyphicon"), 
+      "Zed & Cobalt", paste0("Done - 03/04/2022"), icon = icon("ok", lib="glyphicon"), 
       color = "red"
     )
   })
@@ -113,7 +113,7 @@ server <- function(input, output) {
   # Bloc 2
   output$autrerp2 <- renderInfoBox({
     infoBox(
-      "Thresh & Zeshin", paste0("Done - 21/03/2022"), icon = icon("ok", lib="glyphicon"),
+      "Thresh & Zeshin", paste0("To Do - 02/04/2022"), icon = icon("remove", lib="glyphicon"),
       color = "fuchsia"
     )
   })
@@ -122,7 +122,7 @@ server <- function(input, output) {
   # Bloc 1
   output$autrerp3 <- renderInfoBox({
     infoBox(
-      "Kayn & Eyden", paste0("Done - 20/03/2022"),icon = icon("ok", lib="glyphicon"),
+      "Kayn & Eyden", paste0("Done - 04/04/2022"),icon = icon("ok", lib="glyphicon"),
       color = "maroon"
     )
   })
