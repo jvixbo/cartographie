@@ -49,7 +49,7 @@ server <- function(input, output) {
   # Bloc 1
   output$progressBox <- renderInfoBox({
     infoBox(
-      "Road to Gold", paste0(round((941/1100)*100),"%"), icon = icon("list"),
+      "Road to Gold", paste0(round((956/1100)*100),"%"), icon = icon("list"),
       color = "yellow"
     )
   })
@@ -57,7 +57,7 @@ server <- function(input, output) {
   #Bloc 2
   output$winrate <- renderInfoBox({
     infoBox(
-      "Winrate", paste0(round((49/95)*100),"%"), icon = icon("ok", lib="glyphicon"),
+      "Winrate", paste0(round((52/100)*100),"%"), icon = icon("ok", lib="glyphicon"),
       color = "olive", fill = TRUE, 
     )
   })
