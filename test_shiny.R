@@ -92,7 +92,24 @@ server <- function(input, output) {
   # Bloc 2
   output$winrate3 <- renderInfoBox({
     infoBox(
-      "Winrate", paste0(round((17/29)*100),"%"), icon = icon("ok", lib="glyphicon"),
+      "Winrate", paste0(round((17/30)*100),"%"), icon = icon("ok", lib="glyphicon"),
+      color = "olive", fill = TRUE, 
+    )
+  })
+  
+  # Ligne 4
+  # Bloc 1
+  output$progressBox4 <- renderInfoBox({
+    infoBox(
+      "Road to lvl 30", paste0(round((18548/37392)*100),"%"), icon = icon("list"),
+      color = "maroon",
+    )
+  }) 
+  
+  # Bloc 2
+  output$winrate4 <- renderInfoBox({
+    infoBox(
+      "Winrate", paste0(round((18/28)*100),"%"), icon = icon("ok", lib="glyphicon"),
       color = "olive", fill = TRUE, 
     )
   })
@@ -113,7 +130,7 @@ server <- function(input, output) {
   # Bloc 2
   output$autrerp2 <- renderInfoBox({
     infoBox(
-      "Thresh & Zeshin", paste0("To Do - 02/04/2022"), icon = icon("remove", lib="glyphicon"),
+      "Thresh & Zeshin", paste0("Done - 05/04/2022"), icon = icon("ok", lib="glyphicon"),
       color = "fuchsia"
     )
   })

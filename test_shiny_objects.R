@@ -1,6 +1,9 @@
 library(shiny)
 library(shinydashboard)
 
+install.packages("flexdashboard")
+install.packages("plotly")
+
 #######################HOME##########################
 rm(list = ls())
 home <- tabItem(tabName = "home",
@@ -24,9 +27,14 @@ lol_goals <- tabItem(tabName = "lol",
                        infoBoxOutput("winrate2")
                      ),
                      fluidRow(
-                       infoBox("Wild Rift", "Diamond IV", "noticemeSHENpai #2403", icon = icon("phone", lib="glyphicon"), color = "olive"),
+                       infoBox("Wild Rift", "Emerald IV", "noticemeSHENpai #2403", icon = icon("phone", lib="glyphicon"), color = "olive"),
                        infoBoxOutput("progressBox3"),
                        infoBoxOutput("winrate3")
+                     ),
+                     fluidRow(
+                       infoBox("Shen only account", "Unranked lvl 21", "aleatorix #EUW", icon = icon("heart-empty", lib="glyphicon"), color = "maroon"),
+                       infoBoxOutput("progressBox4"),
+                       infoBoxOutput("winrate4")
                      )
 )
 
@@ -75,14 +83,14 @@ art <- tabItem(tabName = "drawing",
                h2("« My genius will be understood. Eventually. »", 
                   br(), 
                   "- Khada Jhin, the Virtuoso"),
-               fluidRow(box( title = "More 'serious' projects", height = 150, width = 4, solidHeader = TRUE, status = "primary",
+               fluidRow(box( title = "More 'serious' projects", height = 170, width = 3, solidHeader = TRUE, status = "primary",
                             
                             # Contenu
                             "Tarotober x League of Legends (5/31)", 
                             br(),
                             "Mommy's little monster"),
                         
-                        box(title = "Mini-comics", height = 150, width = 4, solidHeader = TRUE, status = "warning",
+                        box(title = "Mini-comics", height = 170, width = 3, solidHeader = TRUE, status = "warning",
                                 
                             # Contenu
                             "A day at the zoo",
@@ -91,15 +99,27 @@ art <- tabItem(tabName = "drawing",
                             br(),
                             "Coming Out Part 2", 
                             br(),
-                            "Welcome to the Spirit Realm" ),
+                            "Coming Out Part 3", 
+                            br(),
+                            "Welcome to the Spirit Realm", 
+                            br(),
+                            "Spirits"),
                         
-                        box(title = "Skinline", height = 150, width = 4, solidHeader = TRUE, status = "success",
+                        box(title = "Skinline", height = 170, width = 3, solidHeader = TRUE, status = "success",
                             
                             # Contenu
                             "Battle Academia",
                             br(),
                             "Galactikkraken",
                             br(),
-                            "Crime City Nightmare / Debonair")
+                            "Crime City Nightmare / Debonair"),
+                        box(title = "xx", height = 170, width = 3, solidHeader = TRUE, status = "danger",
+                            
+                            # Contenu
+                            "xx",
+                            br(),
+                            "xx",
+                            br(),
+                            "xx")
                         )
                )
